@@ -13,3 +13,6 @@ db:
     repository: postgres
     tag: "17"
   containerPort: 5432
+  username: admin
+  password: mypassword
+  database: mydatabase
