@@ -24,11 +24,24 @@
 
 <img src="images/Task_1_0.png" alt="Task_1_0.png" width="300" height="auto"></br>
 
-Чтобы деплоить в разные окружения, создал новый файл перемнных [values-prod.yaml](values-prod.yaml).
+Создал манифесты:
+- первый компонент: [deployment.yaml](hw-app-chart/templates/deployment.yaml)
+- второй компонент: [second-statefulset.yaml](hw-app-chart/templates/second-statefulset.yaml)
+- переменные для обоих манифестов: [values.yaml](hw-app-chart/values.yaml)
+
+Проверка правильности сборки чарта:
+
+<img src="images/Task_1_1.png" alt="Task_1_1.png" width="300" height="auto"></br>
+
+Mожно напрямую изменить версию образа: `helm install my-app ./hw-app-chart --set app.image.tag=2.0.0`
+
+<img src="images/Task_1_2.png" alt="Task_1_2.png" width="300" height="auto"></br>
+
+Чтобы деплоить в разные окружения, создал новый файл перемнных [values-prod.yaml](hw-app-chart/values-prod.yaml).
 
 Для запуска чарта в среде prod использую команду `helm install my-app ./hw-app-chart -f values-dev.yaml`
 
-Так же можно напрямую изменить версию проекта: `helm install my-app ./hw-app-chart --set app.image.tag=2.0.0`
+
 
 
 
