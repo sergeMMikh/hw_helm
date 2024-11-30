@@ -24,6 +24,12 @@
 
 <img src="images/Task_1_0.png" alt="Task_1_0.png" width="300" height="auto"></br>
 
+Чтобы деплоить в разные окружения, создал новый файл перемнных [values-prod.yaml](values-prod.yaml).
+
+Для запуска чарта в среде prod использую команду `helm install my-app ./hw-app-chart -f values-dev.yaml`
+
+Так же можно напрямую изменить версию проекта: `helm install my-app ./hw-app-chart --set app.image.tag=2.0.0`
+
 
 
 ------

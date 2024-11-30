@@ -1,0 +1,8 @@
+app:
+  replicas: 1
+  image:
+    tag: "1.1.0"
+db:
+  replicas: 1
+  image:
+    tag: "1.1.0"
